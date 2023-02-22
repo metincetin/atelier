@@ -1,0 +1,17 @@
+{
+    ".h1":{
+        "font-size":48
+    },
+    "Button.positive":{
+        "background-color":"#18b840",
+        "font-size": 22,
+        "states":{
+            "hovered":{
+                "background-color":"#a4b420"
+            },
+            "pressed":{
+                "background-color":"#ff0000"
+            }
+        }
+    }
+}

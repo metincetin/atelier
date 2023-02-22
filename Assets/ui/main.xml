@@ -1,0 +1,10 @@
+<xml>
+    <body>
+        <containers.VerticalBoxContainer alignment="1">
+            <elements.Label class="h1" alignment="1" text="Dream Atelier"/>
+            <containers.VerticalBoxContainer layoutParameters.expand = "true">
+                <elements.Button class="positive" text="New Project"/>
+            </containers.VerticalBoxContainer>
+        </containers.VerticalBoxContainer>
+    </body>
+</xml>
