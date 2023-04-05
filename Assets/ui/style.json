@@ -2,6 +2,18 @@
     ".h1":{
         "font-size":48
     },
+    "#mainRoot":{
+        "padding-left": 256,
+        "padding-right": 256,
+        "child-start": "middle"
+    },
+    "#atelierTitle":{
+        "alignment":"middle-center"
+    },
+    "#buttonContainer":{
+        "padding-left": 64,
+        "padding-right": 64
+    },
     "Button.positive":{
         "background-color":"#18b840",
         "font-size": 22,
@@ -13,5 +25,8 @@
                 "background-color":"#ff0000"
             }
         }
+    },
+    "VerticalBoxContainer":{
+        "spacing": 4
     }
 }
