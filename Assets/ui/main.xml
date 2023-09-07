@@ -1,12 +1,16 @@
 <xml>
     <body>
-        <VerticalBoxContainer id="mainRoot">
-            <Label id="atelierTitle" class="h1" text="Dream Atelier"/>
-            <VerticalBoxContainer id="buttonContainer">
-                <Button class="positive" text="Open"/>
-                <Button class="positive" text="New Project"/>
-                <Button id="run" class="positive" text="Run"/>
+        <FillContainer>
+            <!--Label id="version" text=""/-->
+            <VerticalBoxContainer id="mainRoot">
+                <Label id="atelierTitle" class="h1 text-center" text="Dream Atelier"/>
+                <Label id="projectTitle" class="h3 text-center collapsed" text=""/>
+                <VerticalBoxContainer id="buttonContainer">
+                    <Button id="open" class="positive" text="Open"/>
+                    <Button class="positive" text="New Project"/>
+                    <Button id="run" class="positive" text="Run"/>
+                </VerticalBoxContainer>
             </VerticalBoxContainer>
-        </VerticalBoxContainer>
+        </FillContainer>
     </body>
 </xml>

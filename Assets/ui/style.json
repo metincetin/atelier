@@ -2,13 +2,16 @@
     ".h1":{
         "font-size":48
     },
+    ".h3":{
+        "font-size": 22
+    },
+    ".text-center":{
+        "alignment":"middle-center"
+    },
     "#mainRoot":{
         "padding-left": 256,
         "padding-right": 256,
         "child-start": "middle"
-    },
-    "#atelierTitle":{
-        "alignment":"middle-center"
     },
     "#buttonContainer":{
         "padding-left": 64,
@@ -28,5 +31,21 @@
     },
     "VerticalBoxContainer":{
         "spacing": 4
+    },
+    "#version":{
+        "font-size": 12,
+        "layout.anchorsMin.x": 1,
+        "layout.anchorsMin.y": 1,
+        "layout.anchorsMax.x": 1,
+        "layout.anchorsMax.y": 1
+    },
+    "#root":{
+        "layout.anchorsMin.x": 0,
+        "layout.anchorsMin.y": 0,
+        "layout.anchorsMax.x": 1,
+        "layout.anchorsMax.y": 1
+    },
+    ".collapsed":{
+        "visibility":"collapsed"
     }
 }
