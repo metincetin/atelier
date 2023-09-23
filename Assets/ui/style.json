@@ -8,14 +8,20 @@
     ".text-center":{
         "alignment":"middle-center"
     },
+    ".fullRect":{
+        "layout.anchorsMin.x": 0,
+        "layout.anchorsMin.y": 0,
+        "layout.anchorsMax.x": 1,
+        "layout.anchorsMax.y": 1
+    },
     "#mainRoot":{
-        "padding-left": 256,
-        "padding-right": 256,
         "child-start": "middle"
     },
-    "#buttonContainer":{
-        "padding-left": 64,
-        "padding-right": 64
+    "#mainRoot *":{
+        "layout.horizontal-alignment": "center"
+    },
+    "#buttonContainer *":{
+        "layout.horizontal-alignment": "center"
     },
     "Button.positive":{
         "background-color":"#18b840",
@@ -37,7 +43,9 @@
         "layout.anchorsMin.x": 1,
         "layout.anchorsMin.y": 1,
         "layout.anchorsMax.x": 1,
-        "layout.anchorsMax.y": 1
+        "layout.anchorsMax.y": 1,
+        "pivot.x": 1,
+        "pivot.y": 1
     },
     "#root":{
         "layout.anchorsMin.x": 0,
