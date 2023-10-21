@@ -80,6 +80,10 @@ class Atelier extends Game {
 		*/
 	}
 
+	override function getName():String {
+		return "atelier";
+	}
+
 	override function getDependentPlugins():Array<Class<IPlugin>> {
 		return [DreamUIPlugin];
 	}
