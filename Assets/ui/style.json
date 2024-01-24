@@ -14,14 +14,17 @@
         "layout.anchorsMax.x": 1,
         "layout.anchorsMax.y": 1
     },
+    "#mainContainer":{
+        "child-start": "middle"
+    },
     "#mainRoot":{
         "child-start": "middle"
     },
     "#mainRoot *":{
-        "layout.horizontal-alignment": "center"
+        "layout.vertical-alignment": "center"
     },
     "#buttonContainer *":{
-        "layout.horizontal-alignment": "center"
+        "layout.vertical-alignment": "center"
     },
     "Button.positive":{
         "background-color":"#18b840",

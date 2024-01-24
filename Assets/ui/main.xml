@@ -1,16 +1,19 @@
 <xml>
     <body>
         <CanvasContainer id="canvas">
-            <Label id="version" text="Atelier v0.111"/>
-            <VerticalBoxContainer id="mainRoot" class="fullRect">
-                <Label id="atelierTitle" class="h1 text-center" text="Dream Atelier"/>
-                <Label id="projectTitle" class="h3 text-center collapsed" text=""/>
-                <VerticalBoxContainer id="buttonContainer">
-                    <Button id="open" class="positive" text="Open"/>
-                    <Button id="newProject" class="positive" text="New Project"/>
-                    <Button id="run" class="positive" text="Run"/>
+            <Label id="version" text="v0.11"/>
+            <HorizontalBoxContainer id="mainContainer" class="fullRect">
+                <VerticalBoxContainer id="mainRoot">
+                    <Label id="atelierTitle" class="h1 text-center" text="Dream Atelier"/>
+                    <Label id="projectTitle" class="h3 text-center collapsed" text=""/>
+                    <VerticalBoxContainer id="buttonContainer">
+                        <Button id="open" class="positive" text="Open"/>
+                        <Button id="newProject" class="positive" text="New Project"/>
+                        <Button id="run" class="positive" text="Run"/>
+                    </VerticalBoxContainer>
                 </VerticalBoxContainer>
-            </VerticalBoxContainer>
+                <TreeView id="tree"/>
+            </HorizontalBoxContainer>
         </CanvasContainer>
     </body>
 </xml>

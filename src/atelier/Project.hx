@@ -34,7 +34,7 @@ class Project {
         pr.configPath = path;
         pr.path = path.split("dreamgame.json")[0];
         var cf = readConfig(path);
-        pr.name = cf.name;
+        pr.name = cf.gameName;
         return Some(pr);
     }
 

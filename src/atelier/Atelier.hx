@@ -1,6 +1,6 @@
 package atelier;
 
-import atelier.elements.ListView;
+import atelier.elements.TreeView.TreeNode;
 import dreamengine.plugins.dreamui.utils.UIXMLElementTypes;
 import haxe.io.Eof;
 import sys.thread.Thread;
@@ -18,6 +18,7 @@ import dreamengine.plugins.dreamui.utils.XMLBuilder;
 import dreamengine.plugins.dreamui.DreamUIPlugin;
 import dreamengine.core.Plugin.IPlugin;
 import dreamengine.core.Game;
+import atelier.elements.*;
 
 class Atelier extends Game {
 	public static var version = "0.1.0";
@@ -26,7 +27,7 @@ class Atelier extends Game {
 
 	override function beginGame() {
 
-		UIXMLElementTypes.registerType("ListView", ListView);
+		UIXMLElementTypes.registerType("TreeView", TreeView);
 
 		var ui = engine.pluginContainer.getPlugin(DreamUIPlugin);
 
@@ -37,6 +38,33 @@ class Atelier extends Game {
 
 
 		main.query("#version", Label).setText(version);
+
+		var treeView = main.query("#tree", TreeView);
+		var tree = new TreeNode("Hello");
+		tree.children = [
+			new TreeNode("Hello"),
+			new TreeNode("Hello"),
+			new TreeNode("Hello"),
+			new TreeNode("Hello"),
+		];
+
+		var inner = new TreeNode("AA");
+		inner.children = [
+			new TreeNode("BB"),
+			new TreeNode("BB"),
+			new TreeNode("BB"),
+			new TreeNode("BB"),
+			new TreeNode("BB"),
+		];
+		tree.children[1].children = [
+			inner,
+			inner,
+			new TreeNode("Hello"),
+			inner,
+		];
+
+		treeView.setModel(tree);
+
 
 		
 		main.query("#open", Button).registerClickedEvent(() -> {
@@ -49,11 +77,12 @@ class Atelier extends Game {
 					project = v;
 					var projectTitle = main.query("#projectTitle", Label);
 					projectTitle.setText(project.getName());
+					trace(project.getName());
 					projectTitle.removeStyleClass("collapsed");
 					applyProject();
 
 				case None:
-					throw("Project could not be loaded");
+					Dialogue.message("Could not load the project.", "Error");
 			}
 		});
 		main.query(new Selector("#run"), Button).registerClickedEvent(function() {
@@ -62,7 +91,6 @@ class Atelier extends Game {
 				try {
 					while (true) {
 						var line = process.stdout.readLine();
-						trace(line);
 					}
 				} catch (e:Eof) {
 					Notification.send("Compiled successfully");
